@@ -1,0 +1,10 @@
+Flask==0.10.1
+gunicorn==19.3.0
+
+Flask-SQLAlchemy==2.1
+psycopg2==2.6.1
+flask-redis==0.3.0
+
+
+# Extensions.
+flask-debugtoolbar==0.10.0
