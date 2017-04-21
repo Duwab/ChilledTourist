@@ -15,15 +15,15 @@ redis:
   volumes:
     - ~/.docker-volumes/mobydock/redis/data:/var/lib/redis/data
 
-# mobydock:
-#   build: .
-#   command: gunicorn -b 0.0.0.0:8000 --reload --access-logfile - "app.app:create_app()"
-#   environment:
-#     PYTHONUNBUFFERED: 1
-#   links:
-#     - postgres
-#     - redis
-#   volumes:
-#     - .:/app
-#   ports:
-#     - '8000:8000'
+mobydock:
+  build: .
+  command: gunicorn -b 0.0.0.0:8000 --reload --access-logfile - "src.app:create_app()"
+  environment:
+    PYTHONUNBUFFERED: 1
+  links:
+    - postgres
+    - redis
+  volumes:
+    - .:/app
+  ports:
+    - '8000:8000'

@@ -10,10 +10,15 @@ def test():
 
 @demo.route('/suggest')
 def suggest():
+    name = request.args.get('search')
+    suggestedPlaces = GS.getSearch(name)
+    # print suggestedPlaces
     return json_response(200, {
-        'places': GS.getSearch()
+        'places': suggestedPlaces
     })
 
 @demo.route('/more')
 def more():
-    return json_response(200, GS.fetchSearch())
+    return json_response(200, {
+        'list': [i.dict for i in GS.tmpSelect()]
+    })

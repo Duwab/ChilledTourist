@@ -4,6 +4,7 @@ gunicorn==19.3.0
 Flask-SQLAlchemy==2.1
 psycopg2==2.6.1
 flask-redis==0.3.0
+requests==2.10.0
 
 
 # Extensions.

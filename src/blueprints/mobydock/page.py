@@ -1,14 +1,11 @@
 from flask import Blueprint, Flask, render_template, redirect, request, url_for
-from flask_sqlalchemy import SQLAlchemy
-from flask_redis import FlaskRedis
-from redis import StrictRedis
 from sqlalchemy.sql.expression import func
-from src.app import redis_store
+from src.app import redis_store, db
 
 
 page = Blueprint('page', __name__)
 
-db = SQLAlchemy()
+# db = SQLAlchemy()
 # redis_store = FlaskRedis.from_custom_provider(StrictRedis)
 
 
