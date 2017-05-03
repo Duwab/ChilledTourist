@@ -6,11 +6,15 @@ Using:
 
 It requires ```docker``` and ```docker-compose``` cli commands
 
-## Run
-Just type
+## Installation
+You can run simultaneously all the services with:
 ```
 docker-compose up
 ```
+
+[Todo] Tell here were to go http://localhost:8000/seed http://localhost:3000
+
+[Todo] Add installer
 
 When you want to stop, hit ```Ctrl+C``` then clean everything:
 ```
