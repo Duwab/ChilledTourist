@@ -6,7 +6,7 @@ demo = Blueprint('demo', __name__, template_folder='templates')
 
 @demo.route('/test')
 def test():
-    return json_response(200, {'message': 'Ok Working'})
+    return json_response(200, {'message': 'Ok Working!'})
 
 @demo.route('/suggest')
 def suggest():

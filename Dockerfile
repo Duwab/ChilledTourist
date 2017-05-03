@@ -15,7 +15,7 @@ COPY . .
 
 VOLUME ["static"]
 
-CMD unicorn -b 0.0.0.0:8000 "app.app:create_app()"
+# CMD unicorn -b 0.0.0.0:8000 "app.app:create_app()"
 
 
 # De base, il n'y a rien dans le container
