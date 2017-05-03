@@ -16,7 +16,7 @@ redis:
     - ~/.docker-volumes/mobydock/redis/data:/var/lib/redis/data
 
 mobydock:
-  build: .
+  build: ./services/python
   command: gunicorn -b 0.0.0.0:8000 --reload --access-logfile - "src.app:create_app()"
   environment:
     PYTHONUNBUFFERED: 1
@@ -24,7 +24,7 @@ mobydock:
     - postgres
     - redis
   volumes:
-    - .:/app
+    - ./services/python:/app
   ports:
     - '8000:8000'
 

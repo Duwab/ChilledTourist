@@ -15,12 +15,12 @@ RUN npm install
 # RUN npm install --unsafe-perm  # See https://github.com/npm/npm/issues/2984
 
 COPY . $INSTALL_PATH
-# RUN npm run build
-RUN rm -rf .git
+# RUN npm run build # not necessary in dev mode, but could be used later
+# RUN rm -rf .git # dockerignore
 
 EXPOSE 3000
 
 # CMD ["npm", "start"]
 
 # docker build -t test/backoffice .
-# docker run -p 3000:3000 <image_id> 
+# docker run -p 3000:3000 <image_id>
