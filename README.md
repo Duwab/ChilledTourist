@@ -7,6 +7,9 @@ Using:
 It requires ```docker``` and ```docker-compose``` cli commands
 
 ## Installation
+
+[Todo] config setup
+
 You can run simultaneously all the services with:
 ```
 docker-compose up
