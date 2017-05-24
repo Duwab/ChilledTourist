@@ -8,6 +8,15 @@ postgres:
   volumes:
     - ~/.docker-volumes/mobydock/postgresql/data:/var/lib/postgresql/data
 
+
+# pgadmin:
+#   image: thajeztah/pgadmin4
+#   ports:
+#     - '5050:5050'
+#   links:
+#     - postgres
+
+
 redis:
   image: redis:3.0
   ports:
@@ -35,3 +44,11 @@ backoffice:
     - ./services/react-backoffice:/app
   ports:
     - '3000:3000'
+
+nodejs:
+  build: ./services/nodejs
+  # command: npm start
+  volumes:
+    - ./services/nodejs:/www
+  ports:
+    - '3001:8080'
