@@ -32,8 +32,16 @@
     "compression": "^1.5.2",
     "cors": "^2.7.1",
     "express": "^4.13.3",
+    "jsonwebtoken": "^7.4.1",
+    "lodash": "^4.17.4",
     "morgan": "^1.8.0",
-    "resource-router-middleware": "^0.6.0"
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "pg": "^6.2.3",
+    "pg-hstore": "^2.3.2",
+    "pg-promise": "^5.7.1",
+    "resource-router-middleware": "^0.6.0",
+    "sequelize": "^3.30.4"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",

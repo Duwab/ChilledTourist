@@ -1,3 +1,41 @@
+## Sequelize configuration
+
+## Init database
+```
+docker exec -it chilledtourist_postgres_1 bash
+psql -U mobydock -W
+CREATE DATABASE database_development;
+```
+
+[Tutorial](https://scotch.io/tutorials/getting-started-with-node-express-and-postgres-using-sequelize)
+
+1. create ```.sequilzerc```
+2. ```npm install -g sequelize-cli```
+3. ```sequelize init```
+
+
+### Creating a new model
+
+```
+sequelize model:create --name Todo --attributes title:string
+```
+
+Then update ```database/models/<model>.js``` and ```database/migrations/<date>-<action>-<model>.js```.
+
+### Update database
+To go to the last configuration:
+```
+sequelize db:migrate
+```
+
+
+
+
+
+
+
+
+
 Express & ES6 REST API Boilerplate
 ==================================
 

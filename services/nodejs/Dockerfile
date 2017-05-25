@@ -9,6 +9,8 @@ RUN apk add --update nodejs bash git
 # Install app dependencies
 COPY package.json /www/package.json
 RUN cd /www; npm install
+RUN npm install -g sequelize-cli
+RUN npm install -g pg
 
 # Copy app source
 COPY . /www

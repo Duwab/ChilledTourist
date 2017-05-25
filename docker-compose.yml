@@ -9,12 +9,12 @@ postgres:
     - ~/.docker-volumes/mobydock/postgresql/data:/var/lib/postgresql/data
 
 
-# pgadmin:
-#   image: thajeztah/pgadmin4
-#   ports:
-#     - '5050:5050'
-#   links:
-#     - postgres
+pgadmin:
+  image: thajeztah/pgadmin4
+  ports:
+    - '5050:5050'
+  links:
+    - postgres
 
 
 redis:
@@ -48,6 +48,8 @@ backoffice:
 nodejs:
   build: ./services/nodejs
   # command: npm start
+  links:
+    - postgres
   volumes:
     - ./services/nodejs:/www
   ports:
