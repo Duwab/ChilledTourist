@@ -32,7 +32,7 @@ module.exports = {
               $iLike: `%${(req.query.recommendedBy || "").toLocaleLowerCase()}%`
             }
           },
-          required: false
+          required: req.query.recommendedBy !== undefined //if no search, then it is not mandatory
         }],
         where: {
           username: {
