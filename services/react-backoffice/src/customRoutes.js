@@ -1,10 +1,8 @@
 // in src/customRoutes.js
 import React from 'react';
-import { Route } from 'react-router';
+import { Route } from 'react-router-dom';
 import SuperGraph from './SuperGraph';
 
-export default () => (
-    <Route>
-        <Route path="/super-graph" component={SuperGraph} />
-    </Route>
-);
+export default [
+  <Route path="/super-graph" component={SuperGraph} />
+];

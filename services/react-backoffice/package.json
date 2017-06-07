@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "admin-on-rest": "^0.9.4",
+    "admin-on-rest": "1.0.2",
+    "query-string": "^4.3.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "^1.0.6"
   },
   "scripts": {
     "start": "react-scripts start",

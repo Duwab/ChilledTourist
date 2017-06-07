@@ -37,13 +37,13 @@ mobydock:
   ports:
     - '8000:8000'
 
-backoffice:
-  build: ./services/react-backoffice
-  command: npm start
-  volumes:
-    - ./services/react-backoffice:/app
-  ports:
-    - '3000:3000'
+# backoffice:
+#   build: ./services/react-backoffice
+#   command: npm start
+#   volumes:
+#     - ./services/react-backoffice:/app
+#   ports:
+#     - '3000:3000'
 
 nodejs:
   build: ./services/nodejs

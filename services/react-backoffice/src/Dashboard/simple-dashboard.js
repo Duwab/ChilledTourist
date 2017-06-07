@@ -4,7 +4,7 @@ import { Card, CardHeader, CardText } from 'material-ui/Card';
 import { ViewTitle } from 'admin-on-rest/lib/mui';
 
 
-export default () => (
+export const Dashboard = () => (
   <div>
     <ViewTitle title="Dashboard" />
     <Card style={{ margin: '2em' }}>

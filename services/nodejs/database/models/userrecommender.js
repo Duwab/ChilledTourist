@@ -11,16 +11,6 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     classMethods: {
       associate: (models) => {
-        // UserRecommender.belongsToMany(models.User, {
-        //   through: 'User',
-        //   foreignKey: 'userId',
-        //   otherKey: 'id'
-        // });
-        // UserRecommender.belongsToMany(models.User, {
-        //   through: 'User',
-        //   foreignKey: 'recommenderId',
-        //   otherKey: 'id'
-        // });
       },
     },
   });

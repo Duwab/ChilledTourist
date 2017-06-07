@@ -22,7 +22,7 @@ const users = [
   },
   {
     id: 3,
-    username: 'Duwab',
+    username: 'duwab',
     password: 'secret'
   }
 ];
@@ -75,7 +75,7 @@ export default ({ config, db }) => {
 
   routes.post("/login", function(req, res) {
     if(req.body.username && req.body.password){
-      var username = req.body.username;
+      var username = req.body.username.toLocaleLowerCase();
       var password = req.body.password;
     } else {
       return res.status(400).send({"message": "username and password are mandatory"});

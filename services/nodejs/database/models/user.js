@@ -8,22 +8,35 @@ module.exports = (sequelize, DataTypes) => {
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    recommender_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
   }, {
     classMethods: {
       associate: (models) => {
-        User.belongsToMany(User, {
-          as: 'Recommenders',
-          through: 'UserRecommenders',
-          foreignKey: 'userId',
-          otherKey: 'recommenderId',
+        User.belongsTo(models.User, {
+          foreignKey: 'recommender_id',
+          as: 'recommender',
+          onDelete: 'SET NULL'
         });
-        User.belongsToMany(User, {
-          as: 'Recommending',
-          through: 'UserRecommenders',
-          foreignKey: 'recommenderId',
-          otherKey: 'userId',
-        });
+        // User.belongsToMany(User, {
+        //   as: 'Recommenders',
+        //   through: 'UserRecommenders',
+        //   foreignKey: 'userId',
+        //   otherKey: 'recommenderId',
+        // });
+        // User.belongsToMany(User, {
+        //   as: 'Recommending',
+        //   through: 'UserRecommenders',
+        //   foreignKey: 'recommenderId',
+        //   otherKey: 'userId',
+        // });
       },
     }
   });
